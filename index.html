@@ -10,97 +10,28 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta property="og:url"           content="https://matthewlc17.github.io/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="ParentIQ" />
+    <meta property="og:description"   content="This is a description for the ParentIQ share button" />
+    <meta property="og:image"         content="http://parentiq.com/myfamilyiq/images/heart-sm.jpg" />
 	<title>jQuery Animation Example</title>
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
-        }
 
-        #container {
-            position: relative;
-            height: 400px;
-            width: 400px;
-        }
-
-        #div1, #div2 {
-            height: 400px;
-            width: 200px;
-            position: absolute;
-            color: white;
-        }
-
-        #container {
-            background-color: #ccc;
-        }
-
-        #div1 {
-            background-color: blue;
-            top: 0;
-            left: 0;
-        }
-
-        #div2 {
-            background-color: green;
-            top: 0;
-            left: 200px;
-        }
-
-        #div3 {
-            position: absolute;
-            color: white;
-            background-color: brown;
-            top: 0;
-            left: 400px;
-            width: 200px;
-            height: 400px;
-        }
-    </style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="animation">
-        <div id="container">
-            <div id="div1">I'm chapter 1.</div>
-            <div id="div2">I'm chapter 2.</div>
-        </div>
-        <div id="div3">Pretend I'm a map.  Now imagine this div were twice as wide and it was covering the green div.</div>
-
-        <button onclick="javascript:slideRight()">Slide Right</button>
-        <button onclick="javascript:slideReset()">Reset</button>
-        <button onclick="javascript:slideLeft()">Slide Left</button>
-        <button onclick="javascript:widenMap()">Widen the Map Div</button>
-        <button onclick="javascript:narrowMap()">Narrow the Map Div</button>
-    </div>
-
-    <script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous">
-	</script>
-
-    <script type="text/javascript">
-        function slideLeft() {
-            $("#div1").animate({ left: -200 });
-            $("#div2").animate({ left: 0 });
-        }
-
-        function slideReset() {
-            $("#div1").animate({ left: 0 });
-            $("#div2").animate({ left: 200 });
-        }
-
-        function slideRight() {
-            $("#div1").animate({ left: 200 });
-            $("#div2").animate({ left: 400 });
-        }
-
-        function widenMap() {
-            $("#div3").animate({ left: 200, width: 400 });
-        }
-
-        function narrowMap() {
-            $("#div3").animate({ left: 400, width: 200 });
-        }
+	<div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1329655090418276&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     </script>
+	<div class="fb-share-button"
+        data-href="https://matthewlc17.github.io/"
+        data-layout="button_count">share
+    </div>
 </body>
 </html>
